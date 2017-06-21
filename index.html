@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+		
+		<body>
+		<form name="bgcolorForm">Change Background Colour
+			<select onChange="if(this.selectedIndex!=0)
+			document.bgColor=this.options[this.selectedIndex].value">
+			<option value="choose">Pick Colour 
+			<option value="#ff0000">Red
+			<option value="#ff6600">Orange
+			<option value="#ffff00">Yellow
+			<option value="#00cc00">Green
+			<option value="#0099ff">Blue
+			<option value="#9B59B6">Purple
+			<option value="#ff0066">Pink
+			<option value="#663300">Brown
+			<option value="#ffffff">White
+			</select></form>
+		
+		<center><span style="display: block !important; width: 320px; text-align: center; font-family: sans-serif; font-size: 12px;"><a href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:00000.6.71042&bannertypeclick=wu_clean2day" title="Vancouver, British Columbia Weather Forecast" target="_blank"><img src="http://weathersticker.wunderground.com/weathersticker/cgi-bin/banner/ban/wxBanner?bannertype=wu_clean2day_both_cond&airportcode=CYVR&ForcedCity=Vancouver&ForcedState=Canada&wmo=71042&language=EN" alt="Find more about Weather in Vancouver, CA" width="300" /></a><br><a href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:00000.6.71042&bannertypeclick=wu_clean2day" title="Get latest Weather Forecast updates" style="font-family: sans-serif; font-size: 12px" target="_blank">Click for weather forecast</a></span></center>
+		
+		
+		
+		
+		<script>
+
+		
+		
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1; //January is 0!
+var yyyy = today.getFullYear();
+var time = today.getTime();
+var h = today.getHours();
+var m = today.getMinutes();
+var day = today.getDay();
+var dayarray = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+if(dd<10) {
+    dd='0'+dd
+} 
+if(mm<10) {
+    mm='0'+mm
+} 
+if(h>12){
+    h=h-12
+}
+if (m<10){
+    m='0'+m
+}
+today = mm+'/'+dd+'/'+yyyy;
+document.write("the current date is "+dayarray[day]+", "+today);
+document.write("<br>the time is "+h+":"+m)
+console.log(h)
+console.log(m)
+</script>
+	<center>	<form name="calculator" >
+<input type="button" value="1" onClick="document.calculator.ans.value+='1'">
+<input type="button" value="2" onClick="document.calculator.ans.value+='2'">
+<input type="button" value="3" onClick="document.calculator.ans.value+='3'">
+<input type="button" value="+" onClick="document.calculator.ans.value+='+'">
+ 
+<input type="button" value="4" onClick="document.calculator.ans.value+='4'">
+<input type="button" value="5" onClick="document.calculator.ans.value+='5'">
+<input type="button" value="6" onClick="document.calculator.ans.value+='6'">
+<input type="button" value="-" onClick="document.calculator.ans.value+='-'">
+ 
+<input type="button" value="7" onClick="document.calculator.ans.value+='7'">
+<input type="button" value="8" onClick="document.calculator.ans.value+='8'">
+<input type="button" value="9" onClick="document.calculator.ans.value+='9'">
+<input type="button" value="*" onClick="document.calculator.ans.value+='*'">
+<input type="button" value="/" onClick="document.calculator.ans.value+='/'">
+ 
+<input type="button" value="0" onClick="document.calculator.ans.value+='0'">
+<input type="reset" value="Reset">
+<input type="button" value="=" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)">
+<br>Solution is <input type="textfield" name="ans" value="">
+</form> </center>
+	
+<center><iframe src="https://calendar.google.com/calendar/embed?src=matthewb190%40deltalearns.ca&ctz=America/Vancouver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe></center>
+
+		
+		
+		<embed name="Imagine Dragons - Believer (with lyrics).mp3" loop="true" hidden="true" src="believer.mp3"> </embed>
+		</body>
+
+</html>
